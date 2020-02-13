@@ -5,10 +5,16 @@
   },
   "resources" : [
     {
-      "filename" : "0197ea30270a4ccd851ade1d9f4d084e.arreferenceimage"
+      "filename" : "ColorfulSpark-1.arreferenceimage"
+    },
+    {
+      "filename" : "ColorfulSpark.arreferenceimage"
     },
     {
       "filename" : "Snow Mountain.arreferenceimage"
+    },
+    {
+      "filename" : "spark-slanted.arreferenceimage"
     },
     {
       "filename" : "Trees In the Dark.arreferenceimage"

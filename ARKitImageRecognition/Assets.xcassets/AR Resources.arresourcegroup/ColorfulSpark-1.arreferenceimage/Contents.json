@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "0197ea30270a4ccd851ade1d9f4d084e.jpg"
+      "filename" : "ColorfulSpark.png"
     }
   ],
   "info" : {
@@ -10,6 +10,7 @@
     "author" : "xcode"
   },
   "properties" : {
-    "width" : 0.26000000000000001
+    "width" : 1.5,
+    "unit" : "inches"
   }
 }

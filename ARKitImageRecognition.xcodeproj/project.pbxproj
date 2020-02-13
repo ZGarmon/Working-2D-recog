@@ -18,6 +18,9 @@
 		F4B7DB0B207DA862007CB607 /* book.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4B7DB04207DA862007CB607 /* book.jpg */; };
 		F4B7DB0C207DA862007CB607 /* book.scn in Resources */ = {isa = PBXBuildFile; fileRef = F4B7DB05207DA862007CB607 /* book.scn */; };
 		F4B7DB0D207DA862007CB607 /* mountain.scn in Resources */ = {isa = PBXBuildFile; fileRef = F4B7DB07207DA862007CB607 /* mountain.scn */; };
+		FFAB9D6323F348A50061D8C5 /* ResistorDAE.dae in Resources */ = {isa = PBXBuildFile; fileRef = FFAB9D6223F348A50061D8C5 /* ResistorDAE.dae */; };
+		FFAB9D6723F34BA60061D8C5 /* ResistorDAE.scn in Resources */ = {isa = PBXBuildFile; fileRef = FFAB9D6623F34BA60061D8C5 /* ResistorDAE.scn */; };
+		FFAB9D6923F5F9180061D8C5 /* ResistorOBJ.obj in Resources */ = {isa = PBXBuildFile; fileRef = FFAB9D6823F5F9180061D8C5 /* ResistorOBJ.obj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		F4B7DB04207DA862007CB607 /* book.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book.jpg; sourceTree = "<group>"; };
 		F4B7DB05207DA862007CB607 /* book.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = book.scn; sourceTree = "<group>"; };
 		F4B7DB07207DA862007CB607 /* mountain.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = mountain.scn; sourceTree = "<group>"; };
+		FFAB9D6223F348A50061D8C5 /* ResistorDAE.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = ResistorDAE.dae; path = ../../../../../Downloads/ResistorDAE.dae; sourceTree = "<group>"; };
+		FFAB9D6623F34BA60061D8C5 /* ResistorDAE.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = ResistorDAE.scn; path = ../../../../../Downloads/ResistorDAE.scn; sourceTree = "<group>"; };
+		FFAB9D6823F5F9180061D8C5 /* ResistorOBJ.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ResistorOBJ.obj; path = ../../../../../Downloads/ResistorOBJ.obj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,7 @@
 		F4B7DAFE207DA862007CB607 /* 3D Models */ = {
 			isa = PBXGroup;
 			children = (
+				FFAB9D6123F3486E0061D8C5 /* Resistor */,
 				F4B7DAFF207DA862007CB607 /* Tree */,
 				F4B7DB02207DA862007CB607 /* 3D Models Credits.md */,
 				F4B7DB03207DA862007CB607 /* Book */,
@@ -112,6 +119,16 @@
 				F4B7DB07207DA862007CB607 /* mountain.scn */,
 			);
 			path = Mountain;
+			sourceTree = "<group>";
+		};
+		FFAB9D6123F3486E0061D8C5 /* Resistor */ = {
+			isa = PBXGroup;
+			children = (
+				FFAB9D6223F348A50061D8C5 /* ResistorDAE.dae */,
+				FFAB9D6823F5F9180061D8C5 /* ResistorOBJ.obj */,
+				FFAB9D6623F34BA60061D8C5 /* ResistorDAE.scn */,
+			);
+			path = Resistor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +195,9 @@
 				F4B7DB09207DA862007CB607 /* tree.png in Resources */,
 				63B119282060F29400A7E3BD /* Assets.xcassets in Resources */,
 				F4B7DB0D207DA862007CB607 /* mountain.scn in Resources */,
+				FFAB9D6723F34BA60061D8C5 /* ResistorDAE.scn in Resources */,
+				FFAB9D6323F348A50061D8C5 /* ResistorDAE.dae in Resources */,
+				FFAB9D6923F5F9180061D8C5 /* ResistorOBJ.obj in Resources */,
 				F4B7DB08207DA862007CB607 /* tree.scn in Resources */,
 				F4B7DB0A207DA862007CB607 /* 3D Models Credits.md in Resources */,
 				F4B7DB0C207DA862007CB607 /* book.scn in Resources */,

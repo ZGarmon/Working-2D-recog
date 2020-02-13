@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var label: UILabel!
     
-    let fadeDuration: TimeInterval = 0.3
+    let fadeDuration: TimeInterval = 5
     let rotateDuration: TimeInterval = 3
     let waitDuration: TimeInterval = 0.5
     
@@ -44,10 +44,10 @@ class ViewController: UIViewController {
         return node
     }()
     
-    lazy var bookNode: SCNNode = {
-        guard let scene = SCNScene(named: "book.scn"),
-            let node = scene.rootNode.childNode(withName: "book", recursively: false) else { return SCNNode() }
-        let scaleFactor  = 0.1
+    lazy var resistorNode: SCNNode = {
+        guard let scene = SCNScene(named: "ResistorOBJ.obj"),
+            let node = scene.rootNode.childNode(withName: "ResistorOBJ", recursively: false) else { return SCNNode() }
+        let scaleFactor  = 0.005
         node.scale = SCNVector3(scaleFactor, scaleFactor, scaleFactor)
         return node
     }()
@@ -114,7 +114,7 @@ extension ViewController: ARSCNViewDelegate {
             // TODO: Overlay 3D Object
             let overlayNode = self.getNode(withImageName: imageName)
             overlayNode.opacity = 0
-            overlayNode.position.y = 0.2
+            overlayNode.position.y = 0.05
             overlayNode.runAction(self.fadeAndSpinAction)
             node.addChildNode(overlayNode)
             
@@ -132,8 +132,12 @@ extension ViewController: ARSCNViewDelegate {
     func getNode(withImageName name: String) -> SCNNode {
         var node = SCNNode()
         switch name {
-        case "Book":
-            node = bookNode
+        case "ColorfulSpark":
+            node = resistorNode
+        case "ColorfulSpark-1":
+            node = resistorNode
+        case "spark-slanted":
+            node = resistorNode
         case "Snow Mountain":
             node = mountainNode
         case "Trees In the Dark":
