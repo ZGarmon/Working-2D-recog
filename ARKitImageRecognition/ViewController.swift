@@ -45,10 +45,11 @@ class ViewController: UIViewController {
     }()
     
     lazy var resistorNode: SCNNode = {
-        guard let scene = SCNScene(named: "ResistorOBJ.obj"),
-            let node = scene.rootNode.childNode(withName: "ResistorOBJ", recursively: false) else { return SCNNode() }
-        let scaleFactor  = 0.005
+        guard let scene = SCNScene(named: "Resistor.scn"),
+            let node = scene.rootNode.childNode(withName: "Resistor", recursively: false) else { return SCNNode() }
+        let scaleFactor  = 0.25
         node.scale = SCNVector3(scaleFactor, scaleFactor, scaleFactor)
+        node.eulerAngles.x += -.pi / 2
         return node
     }()
     
@@ -93,6 +94,7 @@ class ViewController: UIViewController {
         configuration.detectionImages = referenceImages
         let options: ARSession.RunOptions = [.resetTracking, .removeExistingAnchors]
         sceneView.session.run(configuration, options: options)
+        self.label.textColor = UIColor.black
         label.text = "Move camera around to detect images"
     }
 }
@@ -118,6 +120,7 @@ extension ViewController: ARSCNViewDelegate {
             overlayNode.runAction(self.fadeAndSpinAction)
             node.addChildNode(overlayNode)
             
+            self.label.textColor = UIColor.black
             self.label.text = "Image detected: \"\(imageName)\""
         }
     }
@@ -132,7 +135,7 @@ extension ViewController: ARSCNViewDelegate {
     func getNode(withImageName name: String) -> SCNNode {
         var node = SCNNode()
         switch name {
-        case "ColorfulSpark":
+        case "Colorful Spark":
             node = resistorNode
         case "ColorfulSpark-1":
             node = resistorNode
