@@ -45,8 +45,8 @@ class ViewController: UIViewController {
     }()
     
     lazy var resistorNode: SCNNode = {
-        guard let scene = SCNScene(named: "Resistor.scn"),
-            let node = scene.rootNode.childNode(withName: "Resistor", recursively: false) else { return SCNNode() }
+        guard let scene = SCNScene(named: "resistor2.scn"),
+            let node = scene.rootNode.childNode(withName: "resistor2", recursively: false) else { return SCNNode() }
         let scaleFactor  = 0.25
         node.scale = SCNVector3(scaleFactor, scaleFactor, scaleFactor)
         node.eulerAngles.x += -.pi / 2
