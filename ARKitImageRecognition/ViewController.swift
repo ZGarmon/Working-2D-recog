@@ -20,10 +20,12 @@ class ViewController: UIViewController {
     
     lazy var fadeAndSpinAction: SCNAction = {
         return .sequence([
+            .move(by: SCNVector3(0, 0.05, 0), duration: 0),
             .fadeIn(duration: fadeDuration),
-            .rotateBy(x: 0, y: 0, z: CGFloat.pi * 360 / 180, duration: rotateDuration),
+            .move(by: SCNVector3(0, -0.05, 0), duration: rotateDuration),
+            //.rotateBy(x: 0, y: 0, z: CGFloat.pi * 360 / 180, duration: rotateDuration),
             .wait(duration: waitDuration),
-            .fadeOut(duration: fadeDuration)
+            //.fadeOut(duration: fadeDuration)
             ])
     }()
     
@@ -47,9 +49,10 @@ class ViewController: UIViewController {
     lazy var resistorNode: SCNNode = {
         guard let scene = SCNScene(named: "resistor2.scn"),
             let node = scene.rootNode.childNode(withName: "resistor2", recursively: false) else { return SCNNode() }
-        let scaleFactor  = 0.25
+        let scaleFactor  = 0.0002
         node.scale = SCNVector3(scaleFactor, scaleFactor, scaleFactor)
         node.eulerAngles.x += -.pi / 2
+        node.position = SCNVector3(0.02,0,0.01)
         return node
     }()
     
@@ -116,10 +119,10 @@ extension ViewController: ARSCNViewDelegate {
             // TODO: Overlay 3D Object
             let overlayNode = self.getNode(withImageName: imageName)
             overlayNode.opacity = 0
-            overlayNode.position.y = 0.05
+            overlayNode.position.y = 0
             overlayNode.runAction(self.fadeAndSpinAction)
+            // overlayNode.runAction(self.fadeAndSpinAction)
             node.addChildNode(overlayNode)
-            
             self.label.textColor = UIColor.black
             self.label.text = "Image detected: \"\(imageName)\""
         }
@@ -137,14 +140,14 @@ extension ViewController: ARSCNViewDelegate {
         switch name {
         case "Colorful Spark":
             node = resistorNode
-        case "ColorfulSpark-1":
-            node = resistorNode
-        case "spark-slanted":
-            node = resistorNode
-        case "Snow Mountain":
-            node = mountainNode
-        case "Trees In the Dark":
-            node = treeNode
+        //case "ColorfulSpark-1":
+          //  node = resistorNode
+       // case "spark-slanted":
+           // node = resistorNode
+        //case "Snow Mountain":
+          //  node = mountainNode
+        //case "Trees In the Dark":
+          //  node = treeNode
         default:
             break
         }
